@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a72ea92bb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header id="header" aria-hidden="false">
+      <a href="index.html" tabindex="1" title="accueil">
+        <img src="assets/images/logo.png" class="logo" alt="logo"
+      /></a>
+    </header>
+    <main id="main">
+      <div
+        id="photograph-header"
+        aria-label="présentation du photographe"
+      ></div>
+      <!-- SELECT TRI DES MEDIAS -->
+      <div class="select">
+        <div class="textLabel">Trier par</div>
+        <div class="dropDownContainer">
+          <button
+            class="headerDropdown"
+            tabindex="0"
+            aria-label="Choix du tri"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Popularité
+          </button>
+          <ul class="dropDown">
+            <li class="item popularity" tabindex="0">Popularité</li>
+            <li class="item date" tabindex="0">Date</li>
+            <li class="item title" tabindex="0">Titre</li>
+          </ul>
+          <em class="fa-solid fa-chevron-down"></em>
+        </div>
+      </div>
+
+      <div id="gallery"></div>
+    </main>
+    <!-- FOOTER : INFORMATION du total des likes et du prix/jour -->
+    <footer
+      id="footer"
+      class="insert"
+      aria-hidden="false"
+      aria-label="total des likes et prix par jour"
+      tabindex="0"
+    >
+      <div class="insertText">
+        <div class="insertLikes">
+          <div class="totalLikes"></div>
+          <div class="iconLikes">
+            <em class="fa-solid fa-heart" aria-label="likes"></em>
+          </div>
+        </div>
+        <div class="pricePerDay">/ jour</div>
+      </div>
+    </footer>
+    <!-- LIGHTBOX -->
+    <div id="lightboxModal" aria-hidden="true">
+      <div class="lightboxContainer">
+        <div class="angleContainer">
+          <em
+            class="fas fa-angle-left prev"
+            tabindex="0"
+            aria-label="image précédente"
+          ></em>
+        </div>
+        <div class="lightboxMediaContainer">
+          <div class="viewContainer"></div>
+          <div class="legendContainer"></div>
+        </div>
+        <div class="angleContainer">
+          <em
+            class="fas fa-angle-right next"
+            tabindex="0"
+            aria-label="image suivante"
+          ></em>
+        </div>
+      </div>
+      <div
+        class="crossCloseLightbox"
+        tabindex="0"
+        aria-label="fermeture de la lightbox"
+      >
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 42 42"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="svgCross"
+            d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z"
+            fill="#901C1C"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--FIN LIGHTBOX-->
+
+    <!--MODAL CONTACT-->
+    <div class="background-modal"></div>
+    <section id="contact_modal" aria-hidden="true" role="dialog">
+      <div class="modal">
+        <header>
+          <h2 id="titre_modal" aria-label="Formulaire de contact">
+            Contactez-moi
+          </h2>
+          <img
+            src="assets/icons/close.svg"
+            alt="ferme le formulaire"
+            onclick="closeModal()"
+          />
+        </header>
+        <form id="formulaire">
+          <div class="formData">
+            <label for="first">Prénom</label>
+            <input
+              class="text-control"
+              aria-label=" Entrez votre prénom"
+              type="text"
+              id="first"
+              name="first"
+              pattern="[a-zA-Z]{2,}"
+              required
+            />
+            <span id="firstname-error"></span>
+          </div>
+          <div class="formData">
+            <label for="last">Nom</label>
+            <input
+              class="text-control"
+              aria-label="Entrez votre nom"
+              type="text"
+              id="last"
+              name="last"
+              pattern="[a-zA-Z]{2,}"
+              required
+            />
+            <span id="lastname-error"></span>
+          </div>
+          <div class="formData">
+            <label for="email">Email</label>
+            <input
+              class="text-control"
+              aria-label="Entrez votre adresse email"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+            <span id="email-error"></span>
+          </div>
+          <div class="formData">
+            <label for="message">Votre message</label>
+            <textarea
+              class="text-control"
+              aria-label="Détail de votre message"
+              type="text"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+            <span id="message-error"></span>
+          </div>
+          <button
+            class="contact_button"
+            type="button"
+            aria-label="envoyer le formulaire"
+            id="envoyer"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
+    <!--FIN MODAL DE CONTACT-->
+    <script src="scripts/utils/function.js"></script>
+    <script src="scripts/utils/footer.js"></script>
+    <script src="scripts/utils/select.js"></script>
+    <script src="scripts/utils/contactModal.js"></script>
+    <script src="scripts/utils/lightbox.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/factories/photographerPage.js"></script>
+    <script src="scripts/factories/medias.js"></script>
+  </body>
+</html>

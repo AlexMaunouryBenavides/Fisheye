@@ -1,0 +1,472 @@
+/* formulaire de contact*/
+#contact_modal {
+  display: none;
+}
+.background-modal {
+  display: none;
+  background: #c4c4c4;
+  position: fixed;
+  inset: 0;
+  opacity: 0.4;
+}
+.modal {
+  border-radius: 5px;
+  background: #db8876;
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px;
+  margin-left: 30%;
+  position: absolute;
+  top: 9%;
+  z-index: 1000;
+}
+
+.modal header {
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.modal header img {
+  cursor: pointer;
+  width: 35px;
+  margin-top: -50px;
+}
+
+.modal header h2 {
+  font-size: 50px;
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  color: #312e2e;
+  font-size: 36px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+
+form input,
+textarea {
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+form input:focus,
+#message:focus {
+  outline: 0;
+  border: black solid 2px;
+}
+
+textarea {
+  height: 170px;
+}
+
+/*error messages*/
+#firstname-error,
+#lastname-error,
+#email-error,
+#message-error {
+  color: #901c1c;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  display: none;
+}
+/* Fin du formulaire de contact*/
+
+#photograph-header {
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0 100px;
+}
+/*Ajout du css header photographe Page*/
+.photographerHeader {
+  margin: auto 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photographerHeader h2 {
+  color: #d3573c;
+  font-size: 3.5em;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+}
+.photographerHeader h3 {
+  color: #901c1c;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+.photographerHeader h4 {
+  color: #525252;
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.photographerHeader img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #525252;
+  object-fit: cover;
+  margin-top: 20px;
+}
+/*Fin ajout header photographe page*/
+
+.contact_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* css tri photographe*/
+
+.select {
+  margin: 20px 0px 25px 100px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.textLabel {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-right: 16px;
+  margin-top: 21px;
+}
+.dropDownContainer {
+  position: relative;
+}
+.fa-chevron-down {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+.fa-chevron-up {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.headerDropdown {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 170px;
+  height: 69px;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-align: left;
+  background-color: #901c1c;
+  color: white;
+  border: none;
+  padding: 0px 0px 0px 15px;
+  border-radius: 5px;
+}
+.dropDown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 170px;
+  margin: -69px 0px 0px 0px;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  color: white;
+}
+.item {
+  box-sizing: border-box;
+  font-size: 1.125em;
+  font-weight: 700;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 0px;
+  cursor: pointer;
+  background-color: #901c1c;
+  color: white;
+}
+.item:nth-child(1)::after,
+.item:nth-child(2)::after {
+  content: "";
+  /* padding-top: 40px; */
+  padding-bottom: 16px;
+  width: 135px;
+  border-bottom: white 1px solid;
+}
+
+.headerDropdown:hover,
+.item:hover {
+  color: black;
+  background: #db8876;
+}
+
+.headerDropdown:focus,
+.item:focus {
+  color: black;
+  background: #db8876;
+  outline: green solid 0px;
+}
+
+/*coeur du footer*/
+.iconLikes em {
+  font-size: 1em;
+  color: black;
+}
+
+#gallery {
+  margin: 0 100px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#gallery .mediaTextContainer {
+  margin-bottom: 18px;
+}
+
+#gallery .mediaContainer {
+  height: 350px;
+  width: 350px;
+  position: relative;
+  padding: 0px;
+}
+
+#gallery .media {
+  border-radius: 5px;
+  cursor: pointer;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#gallery .media:focus {
+  outline: #d3573c solid 2px;
+}
+
+#gallery img {
+  object-position: 80% 18%;
+}
+
+#gallery video {
+  position: absolute;
+  object-position: 50% 50%;
+}
+
+#gallery .textContainer {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 350px;
+  overflow: hidden;
+}
+
+#gallery h3,
+.nbLikes {
+  color: #901c1c;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.953em;
+  margin: 0px;
+}
+
+#gallery h3 {
+  width: 280px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.953em;
+}
+
+#gallery .nbLikes {
+  margin-right: 4px;
+}
+
+#gallery .likesHeart {
+  display: inline-flex;
+  justify-content: flex-end;
+  padding-right: 1px;
+  margin: 0;
+}
+
+#gallery .iconHeart {
+  cursor: pointer;
+  font-size: 1.4em;
+  color: #901c1c;
+  line-height: 1.953em;
+}
+#gallery .iconHeart::after {
+  color: black;
+}
+
+#gallery h3:focus,
+#gallery .iconHeart:focus {
+  color: #d3573c;
+  outline: white solid 1px;
+}
+
+#footer {
+  box-sizing: border-box;
+  width: 376px;
+  height: 60px;
+  padding: 18px 30px;
+  position: fixed;
+  bottom: 0px;
+  right: 36px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #db8876;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#footer .insertText {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .insertLikes {
+  display: flex;
+}
+
+#footer .totalLikes {
+  width: 50px;
+}
+
+#footer:focus {
+  outline: black solid 2px;
+}
+/*LIGHTBOX*/
+
+#lightboxModal {
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: white;
+  padding: 30px 30px;
+  margin: 0;
+}
+
+#lightboxModal .lightboxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#lightboxModal .angleContainer {
+  display: flex;
+  height: 100%;
+  margin: 0px;
+}
+
+#lightboxModal .prev,
+#lightboxModal .next {
+  cursor: pointer;
+  color: #901c1c;
+  font-size: 4em;
+  margin: auto 20px;
+  position: relative;
+}
+
+#lightboxModal .prev:hover,
+#lightboxModal .next:hover,
+#lightboxModal .prev:focus,
+#lightboxModal .next:focus {
+  color: #d3573c;
+  outline: none;
+}
+
+#lightboxModal .crossCloseLightbox {
+  position: fixed;
+  top: 30px;
+  right: 54px;
+}
+
+#lightboxModal .crossCloseLightbox:focus {
+  outline: none;
+}
+
+#lightboxModal .svgCross:hover {
+  position: absolute;
+  cursor: pointer;
+  fill: #d3573c;
+}
+
+#lightboxModal .crossCloseLightbox:focus .svgCross {
+  fill: #d3573c;
+  outline: none;
+}
+
+#lightboxModal .lightboxMediaContainer {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 88%;
+}
+
+#lightboxModal .viewContainer {
+  width: 100%;
+  height: 95%;
+}
+
+#lightboxModal .media {
+  margin: 0px auto;
+  object-fit: contain;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#lightboxModal .media:focus {
+  outline: #d3573c solid 2px;
+}
+
+#lightboxModal .legendContainer {
+  height: 5%;
+}
+
+#lightboxModal .legend {
+  margin: 12px 0px 0px 0px;
+  color: #901c1c;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#lightboxModal .legend:focus {
+  color: #d3573c;
+  outline: none;
+}
